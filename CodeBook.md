@@ -1,13 +1,12 @@
 # Tidy Data Set
 
-The tidy data set can be found in data/tidyData.csv
-The data set contains 5 columns
+The tidy data set can be found in data/tidyData.txt
+The data set contains 4 columns
 
-1. Row identifier
-2. Activity name, one of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-3. Subject number identifying the being recorded
-4. Feature for the recording.  The full list of all possible values is found at the end of this document.
-5. The measurement value.
+1. Activity name, one of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. Subject number identifying the being recorded
+3. Feature for the recording.  The full list of all possible values is found at the end of this document.
+4. The measurement value.
 
 The following steps were taken to produce a tidy data set
 1. The source data from the files were merged by line numbers: subject_test.txt, X_test.txt, y_test.txt
@@ -17,18 +16,16 @@ The following steps were taken to produce a tidy data set
 5. The data set was melted to have one observation per row
 
 # Mean tidy data set
-The mean tidy data set can be found in data/tidyData.csv
+The mean tidy data set can be found in data/tidyDataMean.txt
 The data set contains 5 columns
 
-1. Row identifier
-2. Activity name, one of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-3. Subject number identifying the being recorded
-4. Feature for the recording.  The full list of all possible values is found at the end of this document.
-5. The mean measurement value.
+1. Activity name, one of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+2. Subject number identifying the being recorded
+3. Feature for the recording.  The full list of all possible values is found at the end of this document.
+4. The mean measurement value.
 
 The following steps were taken to produce a tidy data set
 1. Group all the tidy data by activity, subject and feature, then take the mean value for all the elements.
-
 
 
 ## List of Features

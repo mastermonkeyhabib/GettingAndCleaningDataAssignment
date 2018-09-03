@@ -83,14 +83,14 @@ mean_melted_data <- melted_data %>% group_by(activity_name,subject_id,feature) %
 colnames(mean_melted_data) <- c("activity_name", "subject_id", "feature", "mean_signal_value")
 
 #save raw data outputted
-tidyDataFilename <- paste(dataDir, "/tidyData.csv", sep = "")
+tidyDataFilename <- paste(dataDir, "/tidyData.txt", sep = "")
 if(file.exists(tidyDataFilename)){file.remove(tidyDataFilename)}
-write.csv(melted_data, file = tidyDataFilename)
+write.table(melted_data, file = tidyDataFilename, row.name=FALSE)
 
 #save grouped data output
-tidyDataMeanFilename <- paste(dataDir, "/tidyDataMean.csv", sep = "")
+tidyDataMeanFilename <- paste(dataDir, "/tidyDataMean.txt", sep = "")
 if(file.exists(tidyDataMeanFilename)){file.remove(tidyDataMeanFilename)}
-write.csv(mean_melted_data, file = tidyDataMeanFilename)
+write.table(mean_melted_data, file = tidyDataMeanFilename, row.name=FALSE)
 
 
 #clean working data sets to free memory
